@@ -18,9 +18,14 @@ A fully-featured **Online Judge** platform built with:
 | 📝 Problem Listing Page           | ![](screenshots/2.png) |
 | 📄 Problem Detail View            | ![](screenshots/3.png) |
 | 👨‍💻 Code Editor + Submission     | ![](screenshots/4.png) |
-| 📊 Submission Result / Verdict    | ![](screenshots/5.png) |
-| 👤 User Profile                   | ![](screenshots/6.png) |
-| 🧠 Admin Dashboard (Add Problems) | ![](screenshots/7.png) |
+| 📊 Submission List    | ![](screenshots/5.png) |
+| 📊 Submission Detail / Verdict    | ![](screenshots/6.png) |
+| 👤 User List                   | ![](screenshots/7.png) |
+| 👤 User Profile                   | ![](screenshots/8.png) |
+| 👤 Activity Graph                 | ![](screenshots/9.png) |
+| 🧠 Admin Dashboard (Add Problems) | ![](screenshots/10.png) |
+| 🧠 Add Problem  (Admin)           | ![](screenshots/11.png) |
+| 🧠 Problem List (Admin)           | ![](screenshots/13.png) |
 
 > _Note: Replace the mock filenames `1.png`, `2.png`, etc., with actual filenames as needed._
 
@@ -62,11 +67,14 @@ A fully-featured **Online Judge** platform built with:
 
 ---
 
-## 📁 Project Structure
+## 🧩 Architecture Overview
 
-```bash
-OnlineJudge/
-├── frontend/     # React app
-├── backend/      # Spring Boot REST API
-├── screenshots/  # Project screenshots
-└── README.md     # You're reading it!
+```mermaid
+graph TD
+    User[👤 User] -->|Login/Submit| ReactFrontend
+    ReactFrontend -->|REST API| SpringBootApp
+    SpringBootApp -->|Executes| judge.sh
+    judge.sh -->|Compiles & Runs| DockerContainer
+    DockerContainer -->|Result| SpringBootApp
+    SpringBootApp -->|Stores| PostgreSQL
+    SpringBootApp -->|Verdict| ReactFrontend
