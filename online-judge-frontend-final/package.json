@@ -1,0 +1,44 @@
+{
+  "name": "online-judge-frontend",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint .",
+    "format": "prettier --write ."
+  },
+  "dependencies": {
+    "@monaco-editor/react": "^4.4.6",
+    "@shadcn/ui": "^0.0.4",
+    "@tailwindcss/forms": "^0.5.10",
+    "@tailwindcss/typography": "^0.5.16",
+    "@tanstack/react-query": "^5.28.0",
+    "axios": "^1.6.0",
+    "browser-image-compression": "^2.0.2",
+    "classnames": "^2.5.1",
+    "clsx": "^2.1.0",
+    "flag-icons": "^7.5.0",
+    "lucide-react": "^0.316.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-hook-form": "^7.48.0",
+    "react-router-dom": "^6.14.2",
+    "react-select": "^5.10.2",
+    "react-select-country-list": "^2.2.3",
+    "react-syntax-highlighter": "^15.6.1",
+    "react-world-flags": "^1.6.0",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.37",
+    "@types/react-dom": "^18.2.15",
+    "@vitejs/plugin-react": "^4.7.0",
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.3",
+    "vite": "^5.2.9"
+  }
+}

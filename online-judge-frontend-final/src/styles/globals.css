@@ -1,0 +1,39 @@
+/* src/styles/globals.css */
+
+/* Tailwind base styles */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global font & typography */
+body {
+  @apply bg-white text-gray-900 dark:bg-gray-950 dark:text-gray-100 font-sans;
+}
+
+/* Utility classes */
+.input {
+  @apply w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-400 dark:bg-gray-800 dark:border-gray-600 dark:text-white;
+}
+
+.btn {
+  @apply px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition duration-200;
+}
+
+/* Custom scrollbars for dark/light themes */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgba(100, 100, 100, 0.5);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(100, 100, 100, 0.7);
+}
+.input {
+  @apply border rounded px-3 py-2;
+}
+.file-input {
+  @apply mt-2;
+}
